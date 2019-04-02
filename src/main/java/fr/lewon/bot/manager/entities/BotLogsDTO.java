@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BotLogs {
+public class BotLogsDTO {
 
 	@JsonProperty
 	private List<String> logs;

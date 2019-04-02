@@ -4,16 +4,16 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BotInfosList {
+public class BotInfosListDTO {
 
 	@JsonProperty("bot_infos")
-	private List<BotInfos> botInfosList;
+	private List<BotInfosDTO> botInfosList;
 
-	public List<BotInfos> getBotInfosList() {
+	public List<BotInfosDTO> getBotInfosList() {
 		return botInfosList;
 	}
 
-	public void setBotInfosList(List<BotInfos> botInfosList) {
+	public void setBotInfosList(List<BotInfosDTO> botInfosList) {
 		this.botInfosList = botInfosList;
 	}
 	

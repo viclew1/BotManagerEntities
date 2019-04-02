@@ -2,7 +2,7 @@ package fr.lewon.bot.manager.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BotActionInfos {
+public class BotActionInfosDTO {
 
 	@JsonProperty
 	private String login;
@@ -13,10 +13,10 @@ public class BotActionInfos {
 	@JsonProperty("game_name")
 	private String gameName;
 
-	public BotActionInfos() {
+	public BotActionInfosDTO() {
 	}
 	
-	public BotActionInfos(String login, String password, String gameName) {
+	public BotActionInfosDTO(String login, String password, String gameName) {
 		this.login = login;
 		this.password = password;
 		this.gameName = gameName;
