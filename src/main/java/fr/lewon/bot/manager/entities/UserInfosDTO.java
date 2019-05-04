@@ -2,27 +2,23 @@ package fr.lewon.bot.manager.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BotActionInfosDTO {
+public class UserInfosDTO {
 
 	@JsonProperty
 	private String login;
-	
+
 	@JsonProperty
 	private String password;
-	
-	@JsonProperty("game_name")
-	private String gameName;
 
-	public BotActionInfosDTO() {
+	public UserInfosDTO() {
 	}
-	
-	public BotActionInfosDTO(String login, String password, String gameName) {
+
+	public UserInfosDTO(String login, String password) {
 		this.login = login;
 		this.password = password;
-		this.gameName = gameName;
 	}
 
-	
+
 	public String getLogin() {
 		return login;
 	}
@@ -39,12 +35,4 @@ public class BotActionInfosDTO {
 		this.password = password;
 	}
 
-	public String getGameName() {
-		return gameName;
-	}
-
-	public void setGameName(String gameName) {
-		this.gameName = gameName;
-	}
-	
 }

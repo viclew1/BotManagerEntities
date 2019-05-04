@@ -6,9 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BotMethodDTO {
 
-	@JsonProperty("game_name")
-	private String gameName;
-
 	@JsonProperty
 	private Long id;
 
@@ -22,21 +19,12 @@ public class BotMethodDTO {
 
 	}
 
-	public BotMethodDTO(String gameName, Long id, String label, Map<String, Object> params) {
-		this.gameName = gameName;
+	public BotMethodDTO(Long id, String label, Map<String, Object> params) {
 		this.id = id;
 		this.label = label;
 		this.params = params;
 	}
 
-
-	public String getGameName() {
-		return gameName;
-	}
-
-	public void setGameName(String gameName) {
-		this.gameName = gameName;
-	}
 
 	public Long getId() {
 		return id;
