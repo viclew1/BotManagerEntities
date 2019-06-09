@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotMethodDTO {
 
 	@JsonProperty
-	private Long id;
+	private String id;
 
 	@JsonProperty
 	private String label;
@@ -19,18 +19,18 @@ public class BotMethodDTO {
 
 	}
 
-	public BotMethodDTO(Long id, String label, Map<String, Object> params) {
+	public BotMethodDTO(String id, String label, Map<String, Object> params) {
 		this.id = id;
 		this.label = label;
 		this.params = params;
 	}
 
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
