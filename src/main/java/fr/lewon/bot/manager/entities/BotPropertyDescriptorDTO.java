@@ -1,23 +1,27 @@
 package fr.lewon.bot.manager.entities;
 
-public class BotPropertyDTO {
+public class BotPropertyDescriptorDTO {
 
 	private String key;
+	private String type;
 	private String description;
 	private Boolean needed;
 	private Boolean nullable;
 	private Object defaultValue;
+	private Object[] acceptedValues;
 	
 	
-	public BotPropertyDTO() {
+	public BotPropertyDescriptorDTO() {
 	}
 	
-	public BotPropertyDTO(String key, String description, Boolean needed, Boolean nullable, Object defaultValue) {
+	public BotPropertyDescriptorDTO(String key, String type, String description, Boolean needed, Boolean nullable, Object defaultValue, Object[] acceptedValues) {
 		this.key = key;
+		this.type = type;
 		this.description = description;
 		this.needed = needed;
 		this.nullable = nullable;
 		this.defaultValue = defaultValue;
+		this.acceptedValues = acceptedValues;
 	}
 	
 	
@@ -26,6 +30,12 @@ public class BotPropertyDTO {
 	}
 	public void setKey(String key) {
 		this.key = key;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	public String getDescription() {
 		return description;
@@ -50,6 +60,12 @@ public class BotPropertyDTO {
 	}
 	public void setNullable(Boolean nullable) {
 		this.nullable = nullable;
+	}
+	public Object[] getAcceptedValues() {
+		return acceptedValues;
+	}
+	public void setAcceptedValues(Object[] acceptedValues) {
+		this.acceptedValues = acceptedValues;
 	}
 	
 }
