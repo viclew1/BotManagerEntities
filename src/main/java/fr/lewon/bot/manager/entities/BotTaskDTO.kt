@@ -2,19 +2,13 @@ package fr.lewon.bot.manager.entities
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class BotTaskDTO {
-
-    @JsonProperty
-    val id: Long? = null
-    @JsonProperty
-    val name: String? = null
-    @JsonProperty
-    val description: String? = null
-    @JsonProperty("next_execution_time")
-    val nextExecutionTime: Long? = null
-    @JsonProperty("last_execution_time")
-    val lastExecutionTime: Long? = null
-    @JsonProperty("server_time")
-    val serverTime: Long? = null
-
+data class BotTaskDTO(
+        @JsonProperty var id: Long,
+        @JsonProperty var name: String,
+        @JsonProperty var description: String,
+        @JsonProperty("next_execution_time") var nextExecutionTime: Long,
+        @JsonProperty("last_execution_time") var lastExecutionTime: Long,
+        @JsonProperty("server_time") var serverTime: Long
+) {
+    constructor() : this(-1, "", "", 0, 0, 0)
 }

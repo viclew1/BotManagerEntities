@@ -2,11 +2,9 @@ package fr.lewon.bot.manager.entities
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class CallBotOperationDTO {
-
-    @JsonProperty
-    var id: Long? = null
-    @JsonProperty
-    var params: Map<String, String?> = emptyMap()
-
+data class CallBotOperationDTO(
+        @JsonProperty("operation_id") var operationId: Long,
+        @JsonProperty var params: Map<String, String?> = emptyMap()
+) {
+    constructor() : this(-1)
 }
