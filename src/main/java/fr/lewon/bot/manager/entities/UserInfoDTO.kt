@@ -3,7 +3,7 @@ package fr.lewon.bot.manager.entities
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class UserInfoDTO(
-        @JsonProperty var login: String = "",
-        @JsonProperty var password: String = "",
-        @JsonProperty var params: Map<String, String?> = emptyMap()
+        @field:JsonProperty var login: String = "",
+        @field:JsonProperty var password: String = "",
+        @field:JsonProperty var params: Map<String, String?> = emptyMap()
 )
